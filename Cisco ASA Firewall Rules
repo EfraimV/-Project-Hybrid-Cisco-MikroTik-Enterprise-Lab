@@ -1,0 +1,6 @@
+! Permit site-to-site VPN  
+access-list OUTSIDE extended permit ip 10.1.0.0 255.255.0.0 10.2.0.0 255.255.0.0  
+! Block Telnet  
+access-list INSIDE extended deny tcp any any eq 23  
+! NAT for internal networks  
+nat (INSIDE,OUTSIDE) dynamic interface  
