@@ -1,0 +1,5 @@
+/interface bridge vlan  
+add bridge=bridge1 tagged=ether1,ether2 vlan-ids=10  
+add bridge=bridge1 untagged=ether3 vlan-ids=10  
+/interface vlan  
+add interface=ether1 name=vlan10 vlan-id=10  
